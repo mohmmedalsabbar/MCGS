@@ -1173,19 +1173,19 @@ function initServicesSlider() {
   window.addEventListener('resize', buildDots);
 }
 
-// --- Project Navigation ---
+// --- Project Navigation (Tabs) ---
 function initProjectNav() {
   const btns = document.querySelectorAll('.project-nav-btn');
+  const cases = document.querySelectorAll('.case-study');
+
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
+      cases.forEach(c => c.classList.remove('active'));
       const target = document.getElementById(btn.dataset.target);
-      if (target) {
-        const offset = 160;
-        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
+      if (target) target.classList.add('active');
     });
   });
 }

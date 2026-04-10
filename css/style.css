@@ -936,9 +936,19 @@ html[dir="rtl"] .service-capabilities li::before {
   border: 1px solid var(--light-2);
   border-left: 4px solid var(--green);
   border-radius: var(--radius-md);
-  margin-bottom: 28px;
-  transition: var(--transition);
+  margin-bottom: 0;
   overflow: hidden;
+  display: none;
+  animation: fadeInCase 0.4s ease;
+}
+
+.case-study.active {
+  display: block;
+}
+
+@keyframes fadeInCase {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .case-study:hover {
