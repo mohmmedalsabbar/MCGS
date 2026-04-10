@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCGS SARL | Mauritania Pour le Commerce General et Services</title>
+  <meta name="description" content="MCGS SARL - Construction, Import-Export et Services en Mauritanie. Entrepreneur certifie BAT2 pour travaux publics, hydraulique et energie solaire.">
+  <meta name="keywords" content="MCGS, Mauritania, Construction, Import Export, Services, BTP, Nouakchott, BAT2, Hydraulique">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-logo">
+      <span class="loader-m">M</span><span class="loader-r">R</span>
+    </div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">
+          <span class="logo-m">M</span><span class="logo-r">R</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">MCGS</span>
+          <span class="logo-sub">SARL</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="#about" data-i18n="nav.about">A Propos</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#methodology" data-i18n="nav.methodology">Methodologie</a></li>
+        <li><a href="#equipment" data-i18n="nav.equipment">Equipements</a></li>
+        <li><a href="#certifications" data-i18n="nav.certifications">Conformite</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-pattern"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">Entrepreneur Certifie BAT2</div>
+      <div class="hero-logo-large">
+        <span class="hero-m">M</span><span class="hero-r">R</span>
+        <div class="hero-logo-text">Mauritania</div>
+      </div>
+      <h1 data-i18n="hero.title">Infrastructure, Construction et Solutions d'Ingenierie Durable en Mauritanie depuis 2019</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Entrepreneur de confiance en travaux publics, hydraulique, energie solaire et services generaux. Projets conformes et de haute qualite.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-file-invoice"></i> <span data-i18n="hero.cta1">Demander un Devis</span></a>
+        <a href="https://wa.me/22248727293" target="_blank" rel="noopener" class="btn btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> <span data-i18n="hero.cta2">WhatsApp</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label" data-i18n="hero.stat1">Annees d'Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="18">0</span><span class="stat-suffix">M+</span>
+          <span class="stat-label" data-i18n="hero.stat2">MRU Contrats Executes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="4">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label" data-i18n="hero.stat3">Projets Gouvernementaux</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label" data-i18n="hero.stat4">Conformite Reglementaire</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="about.tag">A Propos</span>
+        <h2 class="section-title" data-i18n="about.title">Entrepreneur Multi-Sectoriel en Mauritanie</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="about-lead" data-i18n="about.lead">MCGS SARL est un entrepreneur multi-sectoriel qui fournit des services d'infrastructure et des solutions techniques conformes aux normes reglementaires mauritaniennes.</p>
+          <p data-i18n="about.text1">Fondee en 2019 a Nouakchott sous forme de SARL, notre entreprise intervient dans la construction de batiments et equipements publics, les travaux hydrauliques, l'installation de systemes d'energie solaire, et le commerce general d'import-export.</p>
+          <p data-i18n="about.text2">Sous la direction de M. Mohamed Yehdhih Mohamed Mahmoud Sabar, Directeur General, nous avons realise avec succes des projets pour des ministeres, agences publiques et organisations non gouvernementales a travers le pays.</p>
+          <div class="about-info-cards">
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-building"></i></div>
+              <div>
+                <h4 data-i18n="about.form">Forme Juridique</h4>
+                <p>SARL</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-calendar"></i></div>
+              <div>
+                <h4 data-i18n="about.founded">Creation</h4>
+                <p>27/08/2019</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4 data-i18n="about.location">Siege</h4>
+                <p>KSAR, Nouakchott</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-hard-hat"></i></div>
+              <div>
+                <h4 data-i18n="about.classification">Classification</h4>
+                <p>BAT2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-values">
+          <h3 class="values-heading" data-i18n="about.vheading">Nos Engagements</h3>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-gem"></i></div>
+            <h3 data-i18n="about.v1title">Qualite</h3>
+            <p data-i18n="about.v1desc">Execution conforme aux specifications techniques et normes en vigueur</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3 data-i18n="about.v2title">Innovation</h3>
+            <p data-i18n="about.v2desc">Solutions techniques adaptees incluant energie solaire et methodes modernes</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><i class="fas fa-leaf"></i></div>
+            <h3 data-i18n="about.v3title">Durabilite</h3>
+            <p data-i18n="about.v3desc">Projets integrant des solutions eco-responsables et durables</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="services.tag">Nos Services</span>
+        <h2 class="section-title light" data-i18n="services.title">Capacites Techniques</h2>
+        <p class="section-desc light" data-i18n="services.desc">Solutions d'ingenierie et de construction multi-sectorielles</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-city"></i></div>
+          <h3 data-i18n="services.s1title">Construction & Travaux Publics</h3>
+          <ul class="service-capabilities">
+            <li data-i18n="services.s1c1">Structures en beton arme (batiments, ecoles, mosquees)</li>
+            <li data-i18n="services.s1c2">Infrastructures de transport (gares, parkings)</li>
+            <li data-i18n="services.s1c3">Dallage, coffrage et maconnerie specialisee</li>
+            <li data-i18n="services.s1c4">Conforme aux normes de classification BAT2</li>
+          </ul>
+          <span class="service-tag" data-i18n="services.s1tag">BAT2 Certifie</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-water"></i></div>
+          <h3 data-i18n="services.s2title">Hydraulique & Eau</h3>
+          <ul class="service-capabilities">
+            <li data-i18n="services.s2c1">Construction de chateaux d'eau (20-30 m3+)</li>
+            <li data-i18n="services.s2c2">Pose de conduites PEHD (capacite 3000m+)</li>
+            <li data-i18n="services.s2c3">Hybridation et raccordement de forages</li>
+            <li data-i18n="services.s2c4">Systemes de pompage solaire</li>
+          </ul>
+          <span class="service-tag" data-i18n="services.s2tag">Infrastructure</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
+          <h3 data-i18n="services.s4title">Energie Solaire</h3>
+          <ul class="service-capabilities">
+            <li data-i18n="services.s4c1">Installation de systemes de pompage solaire</li>
+            <li data-i18n="services.s4c2">Solutions hors-reseau pour zones rurales</li>
+            <li data-i18n="services.s4c3">Groupes electrogenes et alimentation de chantier</li>
+          </ul>
+          <span class="service-tag" data-i18n="services.s4tag">Renouvelable</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-seedling"></i></div>
+          <h3 data-i18n="services.s5title">Amenagement & Agriculture</h3>
+          <ul class="service-capabilities">
+            <li data-i18n="services.s5c1">Installation de clotures et brise-vent</li>
+            <li data-i18n="services.s5c2">Amenagement de sites environnementaux</li>
+            <li data-i18n="services.s5c3">Travaux de terrassement et preparation de terrain</li>
+          </ul>
+          <span class="service-tag" data-i18n="services.s5tag">Environnement</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h3 data-i18n="services.s3title">Import-Export</h3>
+          <ul class="service-capabilities">
+            <li data-i18n="services.s3c1">Approvisionnement en materiaux de construction</li>
+            <li data-i18n="services.s3c2">Importation d'equipements et fournitures techniques</li>
+            <li data-i18n="services.s3c3">Commerce general de produits et materiaux</li>
+          </ul>
+          <span class="service-tag" data-i18n="services.s3tag">International</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3 data-i18n="services.s6title">Prestation de Services</h3>
+          <ul class="service-capabilities">
+            <li data-i18n="services.s6c1">Genie civil, electricite et plomberie</li>
+            <li data-i18n="services.s6c2">Topographie et etudes techniques</li>
+            <li data-i18n="services.s6c3">Equipes pluridisciplinaires mobilisables</li>
+          </ul>
+          <span class="service-tag" data-i18n="services.s6tag">Sur Mesure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Case Studies) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="projects.tag">Realisations</span>
+        <h2 class="section-title" data-i18n="projects.title">Etudes de Cas</h2>
+        <p class="section-desc" data-i18n="projects.desc">Projets executes, certifies et livres avec attestations de bonne execution</p>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="case-study">
+        <div class="case-header">
+          <div>
+            <h3 data-i18n="projects.p1title">Gare Routiere - Axe Nouakchott-Nouadhibou</h3>
+            <div class="case-status"><span class="status-dot"></span> <span data-i18n="projects.completed">Termine & Certifie</span></div>
+          </div>
+          <div class="case-value">~12M MRU</div>
+        </div>
+        <div class="case-meta">
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.client">Client</span><span class="meta-value">AROTR - <span data-i18n="projects.p1client">Min. de l'Equipement et des Transports</span></span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.location">Localisation</span><span class="meta-value">Nouakchott</span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.duration">Duree</span><span class="meta-value" data-i18n="projects.p1duration">10 mois (8 + avenant 2 mois)</span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.mode">Attribution</span><span class="meta-value" data-i18n="projects.p1mode">Appel d'Offres National</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <h4 data-i18n="projects.scope">Etendue des Travaux</h4>
+            <p data-i18n="projects.p1scope">Construction complete d'une gare routiere sur l'axe Nouakchott-Nouadhibou, incluant batiments, amenagements et infrastructures connexes.</p>
+          </div>
+          <div class="case-section">
+            <h4 data-i18n="projects.deliverables">Livrables Cles</h4>
+            <ul>
+              <li data-i18n="projects.p1d1">Construction de la gare routiere et batiments annexes</li>
+              <li data-i18n="projects.p1d2">Dallage en beton arme Ep. 8cm pour le parking</li>
+              <li data-i18n="projects.p1d3">Reserve d'eau en beton arme de 20m3</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4 data-i18n="projects.result">Resultat</h4>
+            <p data-i18n="projects.p1result">Projet livre et certifie par l'AROTR. Attestation d'execution delivree le 10/02/2025. Avenant accorde pour travaux complementaires (+18.8%).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="case-study">
+        <div class="case-header">
+          <div>
+            <h3 data-i18n="projects.p2title">Mosquee Abdallah Hassan Al-Shihabi</h3>
+            <div class="case-status"><span class="status-dot"></span> <span data-i18n="projects.completed">Termine & Certifie</span></div>
+          </div>
+        </div>
+        <div class="case-meta">
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.client">Client</span><span class="meta-value" data-i18n="projects.p2client">Association El YedOlya</span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.duration">Duree</span><span class="meta-value">10 <span data-i18n="projects.months">mois</span></span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.location">Localisation</span><span class="meta-value">Nouakchott</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <h4 data-i18n="projects.scope">Etendue des Travaux</h4>
+            <p data-i18n="projects.p2scope">Construction integrale d'une mosquee selon les specifications architecturales et techniques requises.</p>
+          </div>
+          <div class="case-section">
+            <h4 data-i18n="projects.result">Resultat</h4>
+            <p data-i18n="projects.p2result">Travaux realises conformement aux specifications. Attestation de bonne execution delivree le 10/12/2024.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="case-study">
+        <div class="case-header">
+          <div>
+            <h3 data-i18n="projects.p3title">Clotures & Brise-Vent - Grande Muraille Verte</h3>
+            <div class="case-status"><span class="status-dot"></span> <span data-i18n="projects.completed">Termine & Certifie</span></div>
+          </div>
+          <div class="case-value">~3.6M MRU</div>
+        </div>
+        <div class="case-meta">
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.client">Client</span><span class="meta-value">ANGMV - <span data-i18n="projects.p3client">Min. de l'Environnement</span></span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.duration">Duree</span><span class="meta-value">45 <span data-i18n="projects.days">jours</span></span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.location">Localisation</span><span class="meta-value">Assaba & Hodh El Gharbi</span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.funding">Financement</span><span class="meta-value" data-i18n="projects.p3funding">Subvention de l'Etat</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <h4 data-i18n="projects.scope">Etendue des Travaux</h4>
+            <p data-i18n="projects.p3scope">Pose de clotures et brise-vent pour les sites de Guerou (Wilaya de l'Assaba) et Dwirara (Wilaya du Hodh El Gharbi) dans le cadre du programme national de la Grande Muraille Verte.</p>
+          </div>
+          <div class="case-section">
+            <h4 data-i18n="projects.result">Resultat</h4>
+            <p data-i18n="projects.p3result">Contrat execute avec satisfaction en 45 jours. Attestation de bonne execution delivree le 29/01/2025 par le Directeur General de l'ANGMV.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="case-study">
+        <div class="case-header">
+          <div>
+            <h3 data-i18n="projects.p4title">Chateau d'Eau & Raccordement - Region Assaba</h3>
+            <div class="case-status"><span class="status-dot"></span> <span data-i18n="projects.completed">Termine & Certifie</span></div>
+          </div>
+          <div class="case-value">~3.4M MRU</div>
+        </div>
+        <div class="case-meta">
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.client">Client</span><span class="meta-value" data-i18n="projects.p4client">Min. de l'Hydraulique et de l'Assainissement</span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.duration">Duree</span><span class="meta-value">3 <span data-i18n="projects.months">mois</span></span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.location">Localisation</span><span class="meta-value">Ehel Behloul & Bourka, Assaba</span></div>
+          <div class="meta-item"><span class="meta-label" data-i18n="projects.funding">Financement</span><span class="meta-value" data-i18n="projects.p4funding">Budget de l'Etat</span></div>
+        </div>
+        <div class="case-body">
+          <div class="case-section">
+            <h4 data-i18n="projects.scope">Etendue des Travaux</h4>
+            <p data-i18n="projects.p4scope">Reconstruction d'un chateau d'eau et hybridation/raccordement d'un forage au chateau d'eau existant dans la Wilaya de l'Assaba.</p>
+          </div>
+          <div class="case-section">
+            <h4 data-i18n="projects.deliverables">Livrables Cles</h4>
+            <ul>
+              <li data-i18n="projects.p4d1">Chateau d'eau de 30m3 a 12m de hauteur</li>
+              <li data-i18n="projects.p4d2">3 000 ml de conduite PEHD diametre 63 PN10</li>
+              <li data-i18n="projects.p4d3">Groupe electrogene de 30 KVA installe</li>
+            </ul>
+          </div>
+          <div class="case-section">
+            <h4 data-i18n="projects.result">Resultat</h4>
+            <p data-i18n="projects.p4result">Attestation de bonne fin delivree le 13/02/2025 par la Direction de l'Hydraulique.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Work Methodology Section (NEW) -->
+  <section id="methodology" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="method.tag">Notre Approche</span>
+        <h2 class="section-title light" data-i18n="method.title">Methodologie de Travail</h2>
+        <p class="section-desc light" data-i18n="method.desc">Un processus structure pour garantir la qualite et le respect des delais</p>
+      </div>
+      <div class="method-grid">
+        <div class="method-step">
+          <div class="method-number">01</div>
+          <div class="method-icon"><i class="fas fa-search"></i></div>
+          <h4 data-i18n="method.s1title">Evaluation du Projet</h4>
+          <p data-i18n="method.s1desc">Analyse des besoins, etude du site et evaluation des contraintes techniques</p>
+        </div>
+        <div class="method-step">
+          <div class="method-number">02</div>
+          <div class="method-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h4 data-i18n="method.s2title">Planification Technique</h4>
+          <p data-i18n="method.s2desc">Elaboration des plans d'execution, planning et budget detaille</p>
+        </div>
+        <div class="method-step">
+          <div class="method-number">03</div>
+          <div class="method-icon"><i class="fas fa-people-carry"></i></div>
+          <h4 data-i18n="method.s3title">Mobilisation des Ressources</h4>
+          <p data-i18n="method.s3desc">Deploiement des equipes, equipements et materiaux sur site</p>
+        </div>
+        <div class="method-step">
+          <div class="method-number">04</div>
+          <div class="method-icon"><i class="fas fa-hammer"></i></div>
+          <h4 data-i18n="method.s4title">Execution</h4>
+          <p data-i18n="method.s4desc">Realisation des travaux selon les specifications et le planning etabli</p>
+        </div>
+        <div class="method-step">
+          <div class="method-number">05</div>
+          <div class="method-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h4 data-i18n="method.s5title">Controle Qualite</h4>
+          <p data-i18n="method.s5desc">Verification continue de la conformite et suivi des normes techniques</p>
+        </div>
+        <div class="method-step">
+          <div class="method-number">06</div>
+          <div class="method-icon"><i class="fas fa-handshake"></i></div>
+          <h4 data-i18n="method.s6title">Livraison & Reception</h4>
+          <p data-i18n="method.s6desc">Remise du projet au client avec documentation et attestations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Section (Categorized) -->
+  <section id="equipment" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="equipment.tag">Parc Materiel</span>
+        <h2 class="section-title" data-i18n="equipment.title">Equipements & Materiel</h2>
+        <p class="section-desc" data-i18n="equipment.desc">Un parc materiel complet, en propriete et en location, adapte a chaque projet</p>
+      </div>
+
+      <div class="equip-capabilities-grid">
+        <!-- Transport -->
+        <div class="equip-cap-card">
+          <div class="equip-cap-icon"><i class="fas fa-truck"></i></div>
+          <h3 data-i18n="equipment.catTransport">Transport & Vehicules</h3>
+          <p data-i18n="equipment.catTransportDesc">Vehicules de liaison, camions bennes, vehicules de transport pour le personnel et les materiaux</p>
+          <ul class="equip-cap-list">
+            <li data-i18n="equipment.t1">Vehicules 4x4 tout-terrain</li>
+            <li data-i18n="equipment.t2">Camions bennes multi-tonnages</li>
+            <li data-i18n="equipment.t3">Vehicules de transport de personnel</li>
+          </ul>
+        </div>
+
+        <!-- Construction -->
+        <div class="equip-cap-card">
+          <div class="equip-cap-icon"><i class="fas fa-hard-hat"></i></div>
+          <h3 data-i18n="equipment.catConstruction">Construction & Compactage</h3>
+          <p data-i18n="equipment.catConstructionDesc">Equipements de betonnage, compactage et vibration pour les travaux de genie civil</p>
+          <ul class="equip-cap-list">
+            <li data-i18n="equipment.c1">Betonnieres industrielles</li>
+            <li data-i18n="equipment.c2">Compacteurs et plaques vibrantes</li>
+            <li data-i18n="equipment.c3">Rouleaux compresseurs</li>
+            <li data-i18n="equipment.c4">Vibrateurs a beton</li>
+          </ul>
+        </div>
+
+        <!-- Energy & Tools -->
+        <div class="equip-cap-card">
+          <div class="equip-cap-icon"><i class="fas fa-bolt"></i></div>
+          <h3 data-i18n="equipment.catEnergy">Energie & Outillage</h3>
+          <p data-i18n="equipment.catEnergyDesc">Groupes electrogenes, outillage specialise pour les travaux electriques, plomberie et genie civil</p>
+          <ul class="equip-cap-list">
+            <li data-i18n="equipment.e1">Groupes electrogenes de chantier</li>
+            <li data-i18n="equipment.e2">Outillage electrique et plomberie</li>
+            <li data-i18n="equipment.e3">Materiel de soudure et decoupe</li>
+          </ul>
+        </div>
+
+        <!-- Hydraulic -->
+        <div class="equip-cap-card">
+          <div class="equip-cap-icon"><i class="fas fa-water"></i></div>
+          <h3 data-i18n="equipment.catHydraulic">Hydraulique & Forage</h3>
+          <p data-i18n="equipment.catHydraulicDesc">Materiel pour les travaux d'adduction d'eau, forage et installations hydrauliques</p>
+          <ul class="equip-cap-list">
+            <li data-i18n="equipment.h1">Pompes hydrauliques</li>
+            <li data-i18n="equipment.h2">Equipements de forage</li>
+            <li data-i18n="equipment.h3">Materiel de canalisation</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="equip-note" data-i18n="equipment.note">Materiel disponible en propriete et en location selon les besoins du projet. Capacite d'acquisition supplementaire sur demande.</p>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="cert.tag">Conformite</span>
+        <h2 class="section-title" data-i18n="cert.title">Conformite Reglementaire & Certifications</h2>
+        <p class="section-desc" data-i18n="cert.desc">Pleinement conforme aux exigences legales, fiscales et sociales mauritaniennes</p>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <h3 data-i18n="cert.c1title">Certificat BTP</h3>
+          <p data-i18n="cert.c1desc">Classification BAT2 - Batiment et Equipements Publics</p>
+          <div class="cert-details">
+            <span data-i18n="cert.c1issuer">Ministere de l'Habitat et de l'Urbanisme</span>
+            <span data-i18n="cert.c1valid">Valide jusqu'en Mai 2028</span>
+          </div>
+          <div class="cert-badge"><i class="fas fa-check-circle"></i> <span data-i18n="cert.active">Actif</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3 data-i18n="cert.c2title">Regularite Fiscale</h3>
+          <p data-i18n="cert.c2desc">Attestation de la Direction Generale des Impots</p>
+          <div class="cert-details">
+            <span data-i18n="cert.c2issuer">Direction Generale des Impots</span>
+            <span data-i18n="cert.c2date">Delivree le 07/04/2025</span>
+          </div>
+          <div class="cert-badge"><i class="fas fa-check-circle"></i> <span data-i18n="cert.compliant">En Regle</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-users-cog"></i></div>
+          <h3 data-i18n="cert.c3title">Securite Sociale (CNSS)</h3>
+          <p data-i18n="cert.c3desc">Aucune cotisation impayee aupres de la CNSS</p>
+          <div class="cert-details">
+            <span data-i18n="cert.c3issuer">Caisse Nationale de Securite Sociale</span>
+            <span data-i18n="cert.c3date">Aucune cotisation impayee - 2025</span>
+          </div>
+          <div class="cert-badge"><i class="fas fa-check-circle"></i> <span data-i18n="cert.uptodate">A Jour</span></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-registered"></i></div>
+          <h3 data-i18n="cert.c4title">Registre du Commerce</h3>
+          <p data-i18n="cert.c4desc">Societe enregistree et en activite depuis 2019</p>
+          <div class="cert-details">
+            <span data-i18n="cert.c4issuer">Registre du Commerce - Nouakchott</span>
+            <span data-i18n="cert.c4date">Enregistre depuis 2019</span>
+          </div>
+          <div class="cert-badge"><i class="fas fa-check-circle"></i> <span data-i18n="cert.registered">Enregistre</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners / Client Types Section (NEW) -->
+  <section id="partners" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="partners.tag">Nos Clients</span>
+        <h2 class="section-title" data-i18n="partners.title">Types de Clients & Partenaires</h2>
+        <p class="section-desc" data-i18n="partners.desc">Partenaire local ideal pour les institutions publiques et les entreprises internationales souhaitant operer en Mauritanie</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-icon"><i class="fas fa-landmark"></i></div>
+          <h4 data-i18n="partners.p1">Ministeres Gouvernementaux</h4>
+          <p data-i18n="partners.p1desc">Equipement, Hydraulique, Environnement, Habitat</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon"><i class="fas fa-university"></i></div>
+          <h4 data-i18n="partners.p2">Agences Publiques</h4>
+          <p data-i18n="partners.p2desc">AROTR, ANGMV et autres etablissements publics</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon"><i class="fas fa-hands-helping"></i></div>
+          <h4 data-i18n="partners.p3">ONG & Associations</h4>
+          <p data-i18n="partners.p3desc">Organisations caritatives et associations locales</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon"><i class="fas fa-briefcase"></i></div>
+          <h4 data-i18n="partners.p4">Secteur Prive</h4>
+          <p data-i18n="partners.p4desc">Entreprises nationales et internationales</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="contact.tag">Contact</span>
+        <h2 class="section-title" data-i18n="contact.title">Demander un Devis</h2>
+        <p class="section-desc" data-i18n="contact.desc">Reponse sous 24 heures. Contactez-nous pour toute demande de devis, renseignement ou partenariat.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4 data-i18n="contact.address">Adresse</h4>
+              <p>KSAR, Nouakchott, Mauritanie<br>BP: 8865</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4 data-i18n="contact.phone">Telephone</h4>
+              <p><a href="tel:+22248727293">+222 48 72 72 93</a></p>
+              <p><a href="tel:+22222011121">+222 22 01 11 21</a></p>
+              <p><a href="tel:+22243620893">+222 43 62 08 93</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4 data-i18n="contact.hours">Horaires</h4>
+              <p data-i18n="contact.hoursText">Dimanche - Jeudi: 8h00 - 17h00</p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/profile.php?id=100089844228763" target="_blank" rel="noopener" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+22248727293" class="social-link"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/22248727293" target="_blank" rel="noopener" class="social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <!-- WhatsApp Quick Contact -->
+          <div class="whatsapp-cta">
+            <div class="whatsapp-cta-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="whatsapp-cta-text">
+              <h3 data-i18n="contact.waTitle">Reponse Rapide via WhatsApp</h3>
+              <p data-i18n="contact.waDesc">Ecrivez-nous directement, nous repondons en quelques minutes.</p>
+            </div>
+            <a href="https://wa.me/22248727293" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="contact.waBtn">Ouvrir WhatsApp</a>
+          </div>
+
+          <div class="form-divider">
+            <span data-i18n="contact.or">ou envoyez un message</span>
+          </div>
+
+          <!-- Simplified Form -->
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Nom" data-i18n-ph="contact.phName" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Telephone (WhatsApp de preference)" data-i18n-ph="contact.phPhone">
+            </div>
+            <div class="form-group">
+              <select name="subject">
+                <option value="" disabled selected data-i18n="contact.phSubject">Sujet</option>
+                <option value="quote" data-i18n="contact.optQuote">Demande de Devis</option>
+                <option value="partnership" data-i18n="contact.opt1">Partenariat</option>
+                <option value="project" data-i18n="contact.opt2">Projet</option>
+                <option value="other" data-i18n="contact.opt4">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="3" placeholder="Decrivez votre besoin..." data-i18n-ph="contact.phMessage" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.send">Envoyer</button>
+          </form>
+          <p class="form-trust" data-i18n="contact.trust">Reponse garantie sous 24 heures</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title light" data-i18n="faq.title">Questions Frequentes</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.q1">Quels types de projets MCGS SARL realise-t-elle?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">MCGS SARL realise des projets de construction (ecoles, mosquees, gares routieres), des travaux hydrauliques (chateaux d'eau, conduites PEHD), des projets environnementaux (Grande Muraille Verte), et des installations d'energie solaire.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.q2">Quelle est la classification BTP de MCGS SARL?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">Classification BAT2 pour Batiment et Equipements Publics, certifiee par le Ministere de l'Habitat. Valide jusqu'en Mai 2028.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.q3">MCGS SARL est-elle en regle fiscalement et socialement?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">Oui, pleinement conforme. Attestation fiscale DGI delivree le 07/04/2025. Attestation CNSS confirmant aucune cotisation impayee.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.q4">Comment devenir partenaire de MCGS SARL?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4">Nous accueillons les partenariats pour etendre nos capacites. Partenaire local ideal pour les entreprises internationales souhaitant operer en Mauritanie. Contactez-nous par WhatsApp ou formulaire.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.q5">Quelles zones geographiques couvrez-vous?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a5">Basee a Nouakchott (KSAR), nous operons dans toute la Mauritanie: Assaba, Hodh El Gharbi, axe Nouakchott-Nouadhibou et autres wilayas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <span class="logo-m">M</span><span class="logo-r">R</span>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">MCGS</span>
+              <span class="logo-sub">SARL</span>
+            </div>
+          </div>
+          <p data-i18n="footer.desc">Entrepreneur multi-sectoriel en construction, hydraulique, energie solaire et commerce general en Mauritanie.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=100089844228763" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/22248727293" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+22248727293"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.quicklinks">Navigation</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">A Propos</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="#methodology" data-i18n="nav.methodology">Methodologie</a></li>
+            <li><a href="#certifications" data-i18n="nav.certifications">Conformite</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.services">Secteurs</h4>
+          <ul>
+            <li><a href="#services" data-i18n="services.s1title">Construction & Travaux Publics</a></li>
+            <li><a href="#services" data-i18n="services.s2title">Hydraulique & Eau</a></li>
+            <li><a href="#services" data-i18n="services.s4title">Energie Solaire</a></li>
+            <li><a href="#services" data-i18n="services.s3title">Import-Export</a></li>
+            <li><a href="#services" data-i18n="services.s5title">Amenagement & Agriculture</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="contact.tag">Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> KSAR, Nouakchott, Mauritanie</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+22248727293">+222 48 72 72 93</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+22222011121">+222 22 01 11 21</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/22248727293" target="_blank" rel="noopener">WhatsApp</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MCGS SARL. <span data-i18n="footer.rights">Tous droits reserves.</span></p>
+        <p data-i18n="footer.legal">KSAR, Nouakchott, Mauritanie</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/22248727293" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
