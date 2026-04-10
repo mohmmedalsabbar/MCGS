@@ -28,7 +28,7 @@ const translations = {
     'about.title': 'Entrepreneur Multi-Sectoriel en Mauritanie',
     'about.lead': 'MCGS SARL est un entrepreneur multi-sectoriel qui fournit des services d\'infrastructure et des solutions techniques conformes aux normes reglementaires mauritaniennes.',
     'about.text1': 'Fondee en 2019 a Nouakchott sous forme de SARL, notre entreprise intervient dans la construction de batiments et equipements publics, les travaux hydrauliques, l\'installation de systemes d\'energie solaire, et le commerce general d\'import-export.',
-    'about.text2': 'Sous la direction de M. Mohamed Yehdhih Mohamed Mahmoud Sabar, Directeur General, nous avons realise avec succes des projets pour des ministeres, agences publiques et organisations non gouvernementales a travers le pays.',
+    'about.text2': 'Nous avons realise avec succes des projets pour des ministeres, agences publiques et organisations non gouvernementales a travers le pays, avec un engagement constant envers la qualite et la conformite.',
     'about.form': 'Forme Juridique',
     'about.founded': 'Date de Creation',
     'about.location': 'Siege Social',
@@ -86,6 +86,10 @@ const translations = {
     'projects.tag': 'Portfolio',
     'projects.title': 'Etudes de Cas',
     'projects.desc': 'Projets executes, certifies et livres avec attestations de bonne execution',
+    'projects.nav1': 'Gare Routiere',
+    'projects.nav2': 'Mosquee',
+    'projects.nav3': 'Grande Muraille',
+    'projects.nav4': 'Chateau d\'Eau',
     'projects.completed': 'Termine & Certifie',
     'projects.certified': 'Certifie',
     'projects.client': 'Client',
@@ -133,17 +137,17 @@ const translations = {
     'method.tag': 'Notre Approche',
     'method.title': 'Methodologie de Travail',
     'method.desc': 'Un processus structure pour garantir la qualite et le respect des delais',
-    'method.s1title': 'Evaluation du Projet',
+    'method.s1title': 'Evaluation',
     'method.s1desc': 'Analyse des besoins, etude du site et evaluation des contraintes techniques',
-    'method.s2title': 'Planification Technique',
+    'method.s2title': 'Planification',
     'method.s2desc': 'Elaboration des plans d\'execution, planning et budget detaille',
-    'method.s3title': 'Mobilisation des Ressources',
+    'method.s3title': 'Mobilisation',
     'method.s3desc': 'Deploiement des equipes, equipements et materiaux sur site',
     'method.s4title': 'Execution',
     'method.s4desc': 'Realisation des travaux selon les specifications et le planning etabli',
     'method.s5title': 'Controle Qualite',
     'method.s5desc': 'Verification continue de la conformite et suivi des normes techniques',
-    'method.s6title': 'Livraison & Reception',
+    'method.s6title': 'Livraison',
     'method.s6desc': 'Remise du projet au client avec documentation et attestations',
 
     'partners.tag': 'Nos Clients',
@@ -302,7 +306,7 @@ const translations = {
     'about.title': 'Multi-Sector Contractor in Mauritania',
     'about.lead': 'MCGS SARL is a multi-sector contractor delivering infrastructure services and technical solutions aligned with Mauritanian regulatory standards.',
     'about.text1': 'Founded in 2019 in Nouakchott as a limited liability company, we operate in public building construction, hydraulic infrastructure, solar energy systems, and general import-export trade.',
-    'about.text2': 'Under the leadership of Mr. Mohamed Yehdhih Mohamed Mahmoud Sabar, Director General, we have successfully delivered projects for government ministries, public agencies, and NGOs across the country.',
+    'about.text2': 'We have successfully delivered projects for government ministries, public agencies, and NGOs across the country, with a consistent commitment to quality and compliance.',
     'about.form': 'Legal Form',
     'about.founded': 'Date of Creation',
     'about.location': 'Headquarters',
@@ -360,6 +364,10 @@ const translations = {
     'projects.tag': 'Portfolio',
     'projects.title': 'Case Studies',
     'projects.desc': 'Projects executed, certified, and delivered with completion certificates',
+    'projects.nav1': 'Bus Station',
+    'projects.nav2': 'Mosque',
+    'projects.nav3': 'Great Green Wall',
+    'projects.nav4': 'Water Tower',
     'projects.completed': 'Completed & Certified',
     'projects.certified': 'Certified',
     'projects.client': 'Client',
@@ -407,17 +415,17 @@ const translations = {
     'method.tag': 'Our Approach',
     'method.title': 'Work Methodology',
     'method.desc': 'A structured process ensuring quality and timeline compliance',
-    'method.s1title': 'Project Assessment',
+    'method.s1title': 'Assessment',
     'method.s1desc': 'Needs analysis, site study, and technical constraint assessment',
-    'method.s2title': 'Technical Planning',
+    'method.s2title': 'Planning',
     'method.s2desc': 'Development of execution plans, scheduling, and detailed budgeting',
-    'method.s3title': 'Resource Mobilization',
+    'method.s3title': 'Mobilization',
     'method.s3desc': 'Deployment of teams, equipment, and materials to site',
     'method.s4title': 'Execution',
     'method.s4desc': 'Works execution according to specifications and established schedule',
     'method.s5title': 'Quality Control',
     'method.s5desc': 'Continuous compliance verification and technical standards monitoring',
-    'method.s6title': 'Delivery & Handover',
+    'method.s6title': 'Delivery',
     'method.s6desc': 'Project handover to client with documentation and certificates',
 
     'partners.tag': 'Our Clients',
@@ -576,7 +584,7 @@ const translations = {
     'about.title': 'مقاول متعدد القطاعات في موريتانيا',
     'about.lead': 'شركة MCGS SARL مقاول متعدد القطاعات يقدم خدمات البنية التحتية والحلول التقنية المتوافقة مع المعايير التنظيمية الموريتانية.',
     'about.text1': 'تأسست في 2019 بنواكشوط كشركة ذات مسؤولية محدودة، نعمل في بناء المباني العامة والبنية التحتية الهيدروليكية وأنظمة الطاقة الشمسية والتجارة العامة.',
-    'about.text2': 'تحت إدارة السيد محمد يحظيه محمد محمود صبار، المدير العام، نفذنا بنجاح مشاريع لوزارات حكومية ووكالات عامة ومنظمات غير حكومية عبر البلاد.',
+    'about.text2': 'نفذنا بنجاح مشاريع لوزارات حكومية ووكالات عامة ومنظمات غير حكومية عبر البلاد، مع التزام دائم بالجودة والامتثال.',
     'about.form': 'الشكل القانوني',
     'about.founded': 'تاريخ التأسيس',
     'about.location': 'المقر الرئيسي',
@@ -634,6 +642,10 @@ const translations = {
     'projects.tag': 'أعمالنا',
     'projects.title': 'دراسات حالة',
     'projects.desc': 'مشاريع منفذة ومعتمدة ومسلمة بشهادات حسن التنفيذ',
+    'projects.nav1': 'محطة الحافلات',
+    'projects.nav2': 'المسجد',
+    'projects.nav3': 'السور الأخضر',
+    'projects.nav4': 'خزان المياه',
     'projects.completed': 'منجز ومعتمد',
     'projects.certified': 'معتمد',
     'projects.client': 'العميل',
@@ -681,17 +693,17 @@ const translations = {
     'method.tag': 'منهجنا',
     'method.title': 'منهجية العمل',
     'method.desc': 'عملية منظمة لضمان الجودة والالتزام بالمواعيد',
-    'method.s1title': 'تقييم المشروع',
+    'method.s1title': 'التقييم',
     'method.s1desc': 'تحليل الاحتياجات ودراسة الموقع وتقييم القيود التقنية',
-    'method.s2title': 'التخطيط التقني',
+    'method.s2title': 'التخطيط',
     'method.s2desc': 'إعداد خطط التنفيذ والجدولة والميزانية التفصيلية',
-    'method.s3title': 'تعبئة الموارد',
+    'method.s3title': 'التعبئة',
     'method.s3desc': 'نشر الفرق والمعدات والمواد في الموقع',
     'method.s4title': 'التنفيذ',
     'method.s4desc': 'تنفيذ الأعمال وفقاً للمواصفات والجدول الزمني المحدد',
     'method.s5title': 'مراقبة الجودة',
     'method.s5desc': 'التحقق المستمر من المطابقة ومتابعة المعايير التقنية',
-    'method.s6title': 'التسليم والاستلام',
+    'method.s6title': 'التسليم',
     'method.s6desc': 'تسليم المشروع للعميل مع الوثائق والشهادات',
 
     'partners.tag': 'عملاؤنا',
@@ -842,6 +854,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initSmoothScroll();
   initActiveNav();
+  initServicesSlider();
+  initProjectNav();
 });
 
 // --- Preloader ---
@@ -930,7 +944,7 @@ function applyTranslations(lang) {
 // --- Scroll Animations ---
 function initScrollAnimations() {
   const elements = document.querySelectorAll(
-    '.service-card, .project-card, .equip-card, .cert-card, .value-card, .info-card, .team-category, .director-card, .faq-item, .contact-item'
+    '.service-card, .case-study, .equip-cap-card, .cert-card, .value-card, .info-card, .partner-card, .faq-item, .contact-item, .method-tl-step'
   );
 
   elements.forEach(el => el.classList.add('reveal'));
@@ -1086,6 +1100,91 @@ function initActiveNav() {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
+      }
+    });
+  });
+}
+
+// --- Services Slider ---
+function initServicesSlider() {
+  const slider = document.getElementById('servicesSlider');
+  const dotsContainer = document.getElementById('sliderDots');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  if (!slider) return;
+
+  const cards = slider.querySelectorAll('.service-card');
+  let perView = 3;
+
+  function getPerView() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
+  function buildDots() {
+    perView = getPerView();
+    const totalDots = Math.ceil(cards.length / perView);
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalDots; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => scrollToIndex(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function scrollToIndex(i) {
+    perView = getPerView();
+    const card = cards[i * perView];
+    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    updateDots(i);
+  }
+
+  function updateDots(activeIdx) {
+    dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === activeIdx);
+    });
+  }
+
+  function getCurrentIndex() {
+    perView = getPerView();
+    const scrollLeft = slider.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + 24;
+    return Math.round(scrollLeft / (cardWidth * perView));
+  }
+
+  prevBtn.addEventListener('click', () => {
+    const idx = Math.max(0, getCurrentIndex() - 1);
+    scrollToIndex(idx);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const maxIdx = Math.ceil(cards.length / getPerView()) - 1;
+    const idx = Math.min(maxIdx, getCurrentIndex() + 1);
+    scrollToIndex(idx);
+  });
+
+  slider.addEventListener('scroll', () => {
+    updateDots(getCurrentIndex());
+  });
+
+  buildDots();
+  window.addEventListener('resize', buildDots);
+}
+
+// --- Project Navigation ---
+function initProjectNav() {
+  const btns = document.querySelectorAll('.project-nav-btn');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.target);
+      if (target) {
+        const offset = 160;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
