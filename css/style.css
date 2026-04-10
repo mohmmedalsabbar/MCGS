@@ -48,7 +48,7 @@ html[dir="rtl"] {
 }
 
 html[dir="rtl"] .nav-links { direction: rtl; }
-html[dir="rtl"] .hero-stats { direction: rtl; }
+html[dir="rtl"] .hero-trust { direction: rtl; }
 html[dir="rtl"] .section-header { direction: rtl; }
 html[dir="rtl"] .about-grid { direction: rtl; }
 html[dir="rtl"] .contact-grid { direction: rtl; }
@@ -479,37 +479,28 @@ input, select, textarea { font-family: inherit; }
   box-shadow: 0 8px 25px rgba(37,211,102,0.3);
 }
 
-/* --- Hero Stats --- */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+/* --- Hero Trust Badges --- */
+.hero-trust {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
   padding-top: 40px;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-.stat-item { text-align: center; }
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
 
-.stat-number {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 800;
+.trust-item i {
   color: var(--green-light);
-  display: inline;
-}
-
-.stat-suffix {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--yellow);
-}
-
-.stat-label {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--text-light);
-  margin-top: 4px;
+  font-size: 1.1rem;
 }
 
 .hero-scroll {
@@ -1998,8 +1989,7 @@ html[dir="rtl"] .whatsapp-float {
   .hero-m, .hero-r { font-size: 4rem; }
   #hero h1 { font-size: 1.6rem; }
   .hero-subtitle { font-size: 1rem; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .stat-number { font-size: 2rem; }
+  .hero-trust { gap: 20px; }
 
   .section { padding: 70px 0; }
   .section-title { font-size: 1.8rem; }
@@ -2037,7 +2027,9 @@ html[dir="rtl"] .whatsapp-float {
   .btn { width: 100%; justify-content: center; }
   .partners-grid { grid-template-columns: 1fr; }
   .case-meta { grid-template-columns: 1fr; }
-  .hero-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero-trust { gap: 10px 20px; justify-content: center; }
+  .trust-item { font-size: 0.75rem; gap: 6px; flex: 0 0 calc(50% - 20px); justify-content: center; }
+  .trust-item i { font-size: 0.9rem; }
   .method-tl-dot { width: 40px; height: 40px; font-size: 0.85rem; }
   .method-tl-content h4 { font-size: 0.75rem; }
   .method-tl-step { flex: 0 0 calc(33.333% - 8px); }

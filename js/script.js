@@ -19,10 +19,11 @@ const translations = {
     'hero.subtitle': 'Entrepreneur de confiance en travaux publics, hydraulique, energie solaire et services generaux. Projets conformes et de haute qualite.',
     'hero.cta1': 'Demander un Devis',
     'hero.cta2': 'WhatsApp',
-    'hero.stat1': 'Annees d\'Experience',
-    'hero.stat2': 'MRU Contrats Executes',
-    'hero.stat3': 'Projets Gouvernementaux',
-    'hero.stat4': 'Conformite Reglementaire',
+    'hero.cta3': 'Nos Realisations',
+    'hero.trust1': 'Certifie BAT2',
+    'hero.trust2': 'Partenaire Gouvernemental',
+    'hero.trust3': 'Couverture Nationale',
+    'hero.trust4': 'Multi-Sectoriel',
 
     'about.tag': 'A Propos',
     'about.title': 'Entrepreneur Multi-Sectoriel en Mauritanie',
@@ -297,10 +298,11 @@ const translations = {
     'hero.subtitle': 'Trusted contractor in public works, hydraulics, solar energy and general services. Compliant and high-quality project delivery.',
     'hero.cta1': 'Request a Quote',
     'hero.cta2': 'WhatsApp',
-    'hero.stat1': 'Years of Experience',
-    'hero.stat2': 'MRU Contracts Delivered',
-    'hero.stat3': 'Government Projects',
-    'hero.stat4': 'Regulatory Compliance',
+    'hero.cta3': 'Our Projects',
+    'hero.trust1': 'BAT2 Certified',
+    'hero.trust2': 'Government Partner',
+    'hero.trust3': 'Nationwide Coverage',
+    'hero.trust4': 'Multi-Sector',
 
     'about.tag': 'About Us',
     'about.title': 'Multi-Sector Contractor in Mauritania',
@@ -575,10 +577,11 @@ const translations = {
     'hero.subtitle': 'مقاول موثوق في الأشغال العمومية والهيدروليك والطاقة الشمسية والخدمات العامة. مشاريع متوافقة وعالية الجودة.',
     'hero.cta1': 'طلب عرض أسعار',
     'hero.cta2': 'WhatsApp',
-    'hero.stat1': 'سنوات من الخبرة',
-    'hero.stat2': 'أوقية عقود منفذة',
-    'hero.stat3': 'مشاريع حكومية',
-    'hero.stat4': 'الامتثال التنظيمي',
+    'hero.cta3': 'مشاريعنا',
+    'hero.trust1': 'معتمد BAT2',
+    'hero.trust2': 'شريك حكومي',
+    'hero.trust3': 'تغطية وطنية',
+    'hero.trust4': 'متعدد القطاعات',
 
     'about.tag': 'من نحن',
     'about.title': 'مقاول متعدد القطاعات في موريتانيا',
@@ -848,7 +851,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initLanguageSwitcher();
   initScrollAnimations();
-  initCounters();
   initFAQ();
   initContactForm();
   initBackToTop();
@@ -961,38 +963,6 @@ function initScrollAnimations() {
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   elements.forEach(el => observer.observe(el));
-}
-
-// --- Counter Animation ---
-function initCounters() {
-  const counters = document.querySelectorAll('.stat-number');
-  let counted = false;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !counted) {
-        counted = true;
-        counters.forEach(counter => {
-          const target = parseInt(counter.dataset.count);
-          const duration = 2000;
-          const step = target / (duration / 16);
-          let current = 0;
-
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            counter.textContent = Math.floor(current);
-          }, 16);
-        });
-      }
-    });
-  }, { threshold: 0.5 });
-
-  const statsSection = document.querySelector('.hero-stats');
-  if (statsSection) observer.observe(statsSection);
 }
 
 // --- FAQ Accordion ---
