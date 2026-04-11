@@ -945,24 +945,52 @@ function applyTranslations(lang) {
 
 // --- Scroll Animations ---
 function initScrollAnimations() {
-  const elements = document.querySelectorAll(
-    '.service-card, .case-study, .equip-cap-card, .cert-card, .value-card, .info-card, .partner-card, .faq-item, .contact-item, .method-tl-step'
+  // Standard reveal (fade up)
+  const revealEls = document.querySelectorAll(
+    '.service-card, .equip-cap-card, .cert-card, .value-card, .info-card, .partner-card, .faq-item, .contact-item, .method-tl-step'
   );
+  revealEls.forEach(el => el.classList.add('reveal'));
 
-  elements.forEach(el => el.classList.add('reveal'));
+  // About section: content slides from left, values from right
+  document.querySelectorAll('.about-content').forEach(el => el.classList.add('reveal-left'));
+  document.querySelectorAll('.about-values').forEach(el => el.classList.add('reveal-right'));
+
+  // Contact form wrapper scales up
+  document.querySelectorAll('.contact-form-wrapper').forEach(el => el.classList.add('reveal-scale'));
+
+  // Section headers get their own class for staggered tag/title/desc
+  const headers = document.querySelectorAll('.section-header');
+
+  // Stagger grids
+  document.querySelectorAll('.equip-capabilities-grid, .cert-grid, .partners-grid, .project-nav').forEach(el => {
+    el.classList.add('stagger-children');
+  });
+
+  // All animatable elements
+  const allAnimatable = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, index * 80);
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-  elements.forEach(el => observer.observe(el));
+  allAnimatable.forEach(el => observer.observe(el));
+
+  // Observe section headers separately
+  const headerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        headerObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  headers.forEach(h => headerObserver.observe(h));
 }
 
 // --- FAQ Accordion ---
