@@ -120,14 +120,14 @@ input, select, textarea { font-family: inherit; }
 
 .loader-logo {
   font-family: var(--font-heading);
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 900;
+  letter-spacing: 4px;
   margin-bottom: 30px;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
-.loader-m { color: var(--green); }
-.loader-r { color: var(--yellow); }
+.loader-mcgs { color: var(--green); }
 
 .loader-bar {
   width: 200px;
@@ -189,16 +189,6 @@ input, select, textarea { font-family: inherit; }
   z-index: 1001;
 }
 
-.logo-icon {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.logo-m { color: var(--green); }
-.logo-r { color: var(--yellow); }
-
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -207,10 +197,10 @@ input, select, textarea { font-family: inherit; }
 
 .logo-name {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--white);
-  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--green);
+  letter-spacing: 3px;
 }
 
 .logo-sub {
@@ -398,22 +388,13 @@ input, select, textarea { font-family: inherit; }
   margin-bottom: 24px;
 }
 
-.hero-m {
+.hero-mcgs {
   font-family: var(--font-heading);
   font-size: 6rem;
   font-weight: 900;
   color: var(--green);
   text-shadow: 0 0 40px rgba(27,122,61,0.3);
   animation: glowPulseGreen 3s ease-in-out infinite alternate;
-}
-
-.hero-r {
-  font-family: var(--font-heading);
-  font-size: 6rem;
-  font-weight: 900;
-  color: var(--yellow);
-  text-shadow: 0 0 40px rgba(245,197,24,0.3);
-  animation: glowPulseYellow 3s ease-in-out infinite alternate;
 }
 
 @keyframes glowPulseGreen {
@@ -424,15 +405,6 @@ input, select, textarea { font-family: inherit; }
 @keyframes glowPulseYellow {
   from { text-shadow: 0 0 30px rgba(245,197,24,0.2); }
   to { text-shadow: 0 0 60px rgba(245,197,24,0.5), 0 0 120px rgba(245,197,24,0.15); }
-}
-
-.hero-logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--text-light);
-  letter-spacing: 12px;
-  text-transform: uppercase;
-  margin-top: -10px;
 }
 
 #hero h1 {
@@ -1124,6 +1096,35 @@ html[dir="rtl"] .case-study { border-left: 1px solid var(--light-2); border-righ
 html[dir="rtl"] .case-study:hover { border-right-color: var(--yellow); }
 html[dir="rtl"] .case-section ul li { padding: 4px 18px 4px 0; }
 html[dir="rtl"] .case-section ul li::before { left: auto; right: 0; }
+
+/* --- Case Study Photo Gallery --- */
+.case-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.case-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.case-gallery img:only-child {
+  max-width: 500px;
+  height: 300px;
+}
 
 /* --- Methodology Section --- */
 .method-timeline {
@@ -2123,7 +2124,7 @@ html[dir="rtl"] .whatsapp-float {
 
   .hamburger { display: flex; }
 
-  .hero-m, .hero-r { font-size: 4rem; }
+  .hero-mcgs { font-size: 4rem; }
   #hero h1 { font-size: 1.6rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-trust { gap: 20px; }
@@ -2142,6 +2143,9 @@ html[dir="rtl"] .whatsapp-float {
   .equip-capabilities-grid { grid-template-columns: 1fr; }
   .case-meta { grid-template-columns: 1fr 1fr; }
   .case-header { flex-direction: column; }
+  .case-gallery { grid-template-columns: repeat(2, 1fr); }
+  .case-gallery img { height: 150px; }
+  .case-gallery img:only-child { max-width: 100%; height: 200px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
@@ -2156,14 +2160,14 @@ html[dir="rtl"] .whatsapp-float {
 
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .hero-m, .hero-r { font-size: 3rem; }
+  .hero-mcgs { font-size: 3rem; }
   #hero h1 { font-size: 1.3rem; }
-  .hero-logo-text { letter-spacing: 6px; font-size: 0.9rem; }
   .hero-content { padding: 100px 16px 60px; }
   .hero-buttons { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
   .partners-grid { grid-template-columns: 1fr; }
   .case-meta { grid-template-columns: 1fr; }
+  .case-gallery { grid-template-columns: 1fr; }
   .hero-trust { gap: 10px 20px; justify-content: center; }
   .trust-item { font-size: 0.75rem; gap: 6px; flex: 0 0 calc(50% - 20px); justify-content: center; }
   .trust-item i { font-size: 0.9rem; }
