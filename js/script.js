@@ -214,31 +214,6 @@ const translations = {
     'cert.c4date': 'Enregistré depuis 2019',
     'cert.registered': 'Enregistré',
 
-    'team.tag': 'Notre Équipe',
-    'team.title': 'Structure Organisationnelle',
-    'team.desc': 'Une équipe pluridisciplinaire qualifiée et expérimentée',
-    'team.director': 'Directeur Général',
-    'team.management': 'Direction & Encadrement',
-    'team.trades': 'Corps de Métiers',
-    'team.support': 'Support & Logistique',
-    'team.t1': 'Ingénieur en Génie Civil - Directeur des Travaux',
-    'team.t2': 'Technicien Supérieur en Génie Civil - Conducteur de Travaux',
-    'team.t3': 'Chef de Chantier en Génie Civil',
-    'team.t4': 'Technicien Supérieur en Topographie',
-    'team.t5': 'Technicien Supérieur en Plomberie',
-    'team.t6': 'Ouvriers spécialisés en Maçonnerie et Structure',
-    'team.t7': 'Équipe d\'ouvriers qualifiés et manoeuvres',
-    'team.t8': 'Gardiens, pointeurs, chauffeurs, mécaniciens',
-    'team.tr1': 'Maçons',
-    'team.tr2': 'Ferrailleurs',
-    'team.tr3': 'Menuisiers',
-    'team.tr4': 'Plombiers',
-    'team.tr5': 'Coffreurs',
-    'team.tr6': 'Peintres',
-    'team.tr7': 'Électriciens',
-    'team.tr8': 'Carreleurs',
-    'team.tr9': 'Terrassiers',
-
     'contact.tag': 'Contact',
     'contact.title': 'Demander un Devis',
     'contact.desc': 'Réponse sous 24 heures. Contactez-nous pour toute demande de devis, renseignement ou partenariat.',
@@ -494,31 +469,6 @@ const translations = {
     'cert.c4issuer': 'Trade Register - Nouakchott',
     'cert.c4date': 'Registered since 2019',
     'cert.registered': 'Registered',
-
-    'team.tag': 'Our Team',
-    'team.title': 'Organizational Structure',
-    'team.desc': 'A qualified and experienced multidisciplinary team',
-    'team.director': 'Director General',
-    'team.management': 'Management & Supervision',
-    'team.trades': 'Trade Teams',
-    'team.support': 'Support & Logistics',
-    'team.t1': 'Civil Engineer - Works Director',
-    'team.t2': 'Senior Technician in Civil Engineering - Works Supervisor',
-    'team.t3': 'Civil Engineering Site Manager',
-    'team.t4': 'Senior Surveying Technician',
-    'team.t5': 'Senior Plumbing Technician',
-    'team.t6': 'Specialized Workers in Masonry and Structure',
-    'team.t7': 'Qualified workers and laborers team',
-    'team.t8': 'Guards, timekeepers, drivers, mechanics',
-    'team.tr1': 'Masons',
-    'team.tr2': 'Rebar Workers',
-    'team.tr3': 'Carpenters',
-    'team.tr4': 'Plumbers',
-    'team.tr5': 'Formwork Specialists',
-    'team.tr6': 'Painters',
-    'team.tr7': 'Electricians',
-    'team.tr8': 'Tile Setters',
-    'team.tr9': 'Earthworkers',
 
     'contact.tag': 'Contact',
     'contact.title': 'Request a Quote',
@@ -776,31 +726,6 @@ const translations = {
     'cert.c4date': 'مسجل منذ 2019',
     'cert.registered': 'مسجل',
 
-    'team.tag': 'فريقنا',
-    'team.title': 'الهيكل التنظيمي',
-    'team.desc': 'فريق متعدد التخصصات مؤهل وذو خبرة',
-    'team.director': 'المدير العام',
-    'team.management': 'الإدارة والإشراف',
-    'team.trades': 'فرق المهن',
-    'team.support': 'الدعم واللوجستيات',
-    'team.t1': 'مهندس مدني - مدير الأشغال',
-    'team.t2': 'تقني سام في الهندسة المدنية - مشرف الأشغال',
-    'team.t3': 'رئيس ورشة هندسة مدنية',
-    'team.t4': 'تقني سام في المساحة',
-    'team.t5': 'تقني سام في السباكة',
-    'team.t6': 'عمال متخصصون في البناء والهياكل',
-    'team.t7': 'فريق عمال مؤهلين وأيدي عاملة',
-    'team.t8': 'حراس، مسجلون، سائقون، ميكانيكيون',
-    'team.tr1': 'بناؤون',
-    'team.tr2': 'حدادون',
-    'team.tr3': 'نجارون',
-    'team.tr4': 'سباكون',
-    'team.tr5': 'متخصصو قوالب',
-    'team.tr6': 'دهانون',
-    'team.tr7': 'كهربائيون',
-    'team.tr8': 'مبلطون',
-    'team.tr9': 'عمال حفر',
-
     'contact.tag': 'اتصل بنا',
     'contact.title': 'طلب تسعيرة',
     'contact.desc': 'الرد خلال 24 ساعة. تواصل معنا لطلب عروض الأسعار أو الاستفسارات أو الشراكات.',
@@ -864,6 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initServicesSlider();
   initProjectNav();
+  initGallerySlideshows();
 });
 
 // --- Preloader ---
@@ -1182,6 +1108,14 @@ function initProjectNav() {
   const btns = document.querySelectorAll('.project-nav-btn');
   const cases = document.querySelectorAll('.case-study');
 
+  // Ensure correct initial state on all devices
+  const activeBtn = document.querySelector('.project-nav-btn.active');
+  if (activeBtn) {
+    cases.forEach(c => c.classList.remove('active'));
+    const target = document.getElementById(activeBtn.dataset.target);
+    if (target) target.classList.add('active');
+  }
+
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
@@ -1191,5 +1125,86 @@ function initProjectNav() {
       const target = document.getElementById(btn.dataset.target);
       if (target) target.classList.add('active');
     });
+  });
+}
+
+// --- Gallery Slideshows ---
+function initGallerySlideshows() {
+  document.querySelectorAll('.case-gallery').forEach(gallery => {
+    const imgs = gallery.querySelectorAll('img');
+    if (imgs.length <= 1) {
+      if (imgs.length === 1) imgs[0].classList.add('active');
+      return;
+    }
+
+    // Set first image active
+    imgs[0].classList.add('active');
+
+    // Create prev/next buttons
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'gallery-prev';
+    prevBtn.setAttribute('aria-label', 'Previous');
+    prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'gallery-next';
+    nextBtn.setAttribute('aria-label', 'Next');
+    nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+
+    // Create counter
+    const counter = document.createElement('span');
+    counter.className = 'gallery-counter';
+    counter.textContent = `1 / ${imgs.length}`;
+
+    // Create dots
+    const dotsWrap = document.createElement('div');
+    dotsWrap.className = 'gallery-dots';
+    imgs.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Image ${i + 1}`);
+      dotsWrap.appendChild(dot);
+    });
+
+    gallery.appendChild(prevBtn);
+    gallery.appendChild(nextBtn);
+    gallery.appendChild(counter);
+    gallery.appendChild(dotsWrap);
+
+    let current = 0;
+
+    function goTo(idx) {
+      imgs[current].classList.remove('active');
+      current = (idx + imgs.length) % imgs.length;
+      imgs[current].classList.add('active');
+      counter.textContent = `${current + 1} / ${imgs.length}`;
+      dotsWrap.querySelectorAll('.gallery-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    dotsWrap.querySelectorAll('.gallery-dot').forEach((dot, i) => {
+      dot.addEventListener('click', () => goTo(i));
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    gallery.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    gallery.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goTo(current + 1);
+        else goTo(current - 1);
+      }
+    }, { passive: true });
   });
 }
