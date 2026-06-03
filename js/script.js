@@ -863,7 +863,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initActiveNav();
   initServicesSlider();
-  initProjectNav();
+  loadProjects().then(() => renderProjects(currentLang));
 });
 
 // --- Preloader ---
@@ -916,6 +916,7 @@ function initLanguageSwitcher() {
       btn.classList.add('active');
       currentLang = lang;
       applyTranslations(lang);
+      renderProjects(lang);
 
       // RTL for Arabic
       if (lang === 'ar') {
@@ -1177,19 +1178,3 @@ function initServicesSlider() {
   window.addEventListener('resize', buildDots);
 }
 
-// --- Project Navigation (Tabs) ---
-function initProjectNav() {
-  const btns = document.querySelectorAll('.project-nav-btn');
-  const cases = document.querySelectorAll('.case-study');
-
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      cases.forEach(c => c.classList.remove('active'));
-      const target = document.getElementById(btn.dataset.target);
-      if (target) target.classList.add('active');
-    });
-  });
-}

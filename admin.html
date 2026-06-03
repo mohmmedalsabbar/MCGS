@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCGS Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-box">
+      <h1>MCGS Admin</h1>
+      <p id="loginDesc">Enter your admin password</p>
+      <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password">
+      <button class="btn" id="loginBtn">Sign In</button>
+      <div class="login-error" id="loginError">Incorrect password</div>
+      <div class="login-setup" id="loginSetup" style="display:none;">
+        First time? Enter a password to set up admin access.
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Layout -->
+  <div class="admin-layout" id="adminLayout">
+
+    <!-- Top Bar -->
+    <div class="admin-topbar">
+      <div class="logo">MCGS <span>Admin</span></div>
+      <div class="topbar-actions">
+        <button class="btn-sm btn-export" id="btnExport"><i class="fas fa-download"></i> Export JSON</button>
+        <button class="btn-sm btn-preview" id="btnPreview"><i class="fas fa-eye"></i> Preview Site</button>
+        <button class="btn-sm btn-logout" id="btnLogout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+      <div class="sidebar-header">
+        <h3>Projects</h3>
+        <button class="btn-add" id="btnAddProject" title="Add Project"><i class="fas fa-plus"></i></button>
+      </div>
+      <ul class="project-list" id="projectList"></ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main" id="adminMain">
+      <div class="editor-empty" id="editorEmpty">
+        <span>Select a project to edit, or click + to add a new one.</span>
+      </div>
+      <div class="editor-card" id="editorCard" style="display:none;">
+        <h2 id="editorTitle">Edit Project</h2>
+
+        <!-- Basic Info -->
+        <div class="form-section">
+          <h3>Basic Information</h3>
+          <div class="form-check">
+            <input type="checkbox" id="projVisible" checked>
+            <label for="projVisible">Visible on website</label>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Project ID</label>
+              <input type="text" id="projId" placeholder="e.g. project5" readonly>
+            </div>
+            <div class="form-group">
+              <label>Price / Value</label>
+              <input type="text" id="projPrice" placeholder="e.g. ~3.4M MRU">
+            </div>
+          </div>
+        </div>
+
+        <!-- Multilingual Fields -->
+        <div class="form-section">
+          <h3>Multilingual Content</h3>
+          <div class="lang-tabs" id="langTabs">
+            <button class="lang-tab active" data-lang="fr">FR</button>
+            <button class="lang-tab" data-lang="en">EN</button>
+            <button class="lang-tab" data-lang="ar">AR</button>
+          </div>
+
+          <div id="langPanels">
+            <!-- FR Panel -->
+            <div class="lang-panel active" data-lang="fr">
+              <div class="form-group">
+                <label>Title (FR)</label>
+                <input type="text" id="projTitle_fr" placeholder="Titre du projet">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nav Label (FR)</label>
+                  <input type="text" id="projNavLabel_fr" placeholder="Onglet court">
+                </div>
+                <div class="form-group">
+                  <label>Status (FR)</label>
+                  <input type="text" id="projStatus_fr" placeholder="e.g. Termine & Certifie">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Scope (FR)</label>
+                <textarea id="projScope_fr" placeholder="Description du projet"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Result (FR)</label>
+                <textarea id="projResult_fr" placeholder="Resultat du projet"></textarea>
+              </div>
+            </div>
+
+            <!-- EN Panel -->
+            <div class="lang-panel" data-lang="en" style="display:none;">
+              <div class="form-group">
+                <label>Title (EN)</label>
+                <input type="text" id="projTitle_en" placeholder="Project title">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nav Label (EN)</label>
+                  <input type="text" id="projNavLabel_en" placeholder="Short tab label">
+                </div>
+                <div class="form-group">
+                  <label>Status (EN)</label>
+                  <input type="text" id="projStatus_en" placeholder="e.g. Completed & Certified">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Scope (EN)</label>
+                <textarea id="projScope_en" placeholder="Project scope description"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Result (EN)</label>
+                <textarea id="projResult_en" placeholder="Project result"></textarea>
+              </div>
+            </div>
+
+            <!-- AR Panel -->
+            <div class="lang-panel" data-lang="ar" style="display:none;">
+              <div class="form-group">
+                <label>Title (AR)</label>
+                <input type="text" id="projTitle_ar" placeholder="عنوان المشروع" dir="rtl">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Nav Label (AR)</label>
+                  <input type="text" id="projNavLabel_ar" placeholder="تسمية قصيرة" dir="rtl">
+                </div>
+                <div class="form-group">
+                  <label>Status (AR)</label>
+                  <input type="text" id="projStatus_ar" placeholder="مثال: منجز ومعتمد" dir="rtl">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Scope (AR)</label>
+                <textarea id="projScope_ar" placeholder="وصف نطاق المشروع" dir="rtl"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Result (AR)</label>
+                <textarea id="projResult_ar" placeholder="نتيجة المشروع" dir="rtl"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Fields (Repeatable) -->
+        <div class="form-section">
+          <h3>Info Fields (Client, Duration, Location, etc.)</h3>
+          <div class="repeatable-list" id="infoFieldsList"></div>
+          <button class="btn-add-item" id="btnAddInfoField"><i class="fas fa-plus"></i> Add Info Field</button>
+        </div>
+
+        <!-- Deliverables (Repeatable) -->
+        <div class="form-section">
+          <h3>Deliverables</h3>
+          <div class="repeatable-list" id="deliverablesList"></div>
+          <button class="btn-add-item" id="btnAddDeliverable"><i class="fas fa-plus"></i> Add Deliverable</button>
+        </div>
+
+        <!-- Images -->
+        <div class="form-section">
+          <h3>Images</h3>
+          <div class="repeatable-list" id="imagesList"></div>
+          <button class="btn-add-item" id="btnAddImage"><i class="fas fa-plus"></i> Add Image</button>
+        </div>
+
+        <!-- Actions -->
+        <div class="editor-actions">
+          <button class="btn-save" id="btnSave"><i class="fas fa-check"></i> Save Project</button>
+          <button class="btn-cancel" id="btnCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal-box">
+      <h3>Delete Project</h3>
+      <p>Are you sure you want to delete this project? This cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn-cancel" id="btnDeleteCancel">Cancel</button>
+        <button class="btn-danger" id="btnDeleteConfirm">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
