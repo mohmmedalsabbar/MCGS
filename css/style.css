@@ -1100,16 +1100,14 @@ html[dir="rtl"] .case-section ul li::before { left: auto; right: 0; }
 /* --- Case Study Photo Gallery --- */
 .case-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin: 20px 0;
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .case-gallery img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -1117,12 +1115,13 @@ html[dir="rtl"] .case-section ul li::before { left: auto; right: 0; }
 }
 
 .case-gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .case-gallery img:only-child {
-  max-width: 500px;
+  grid-column: 1 / -1;
+  max-width: 600px;
   height: 300px;
 }
 
@@ -2143,8 +2142,7 @@ html[dir="rtl"] .whatsapp-float {
   .equip-capabilities-grid { grid-template-columns: 1fr; }
   .case-meta { grid-template-columns: 1fr 1fr; }
   .case-header { flex-direction: column; }
-  .case-gallery { grid-template-columns: repeat(2, 1fr); }
-  .case-gallery img { height: 150px; }
+  .case-gallery img { height: 160px; }
   .case-gallery img:only-child { max-width: 100%; height: 200px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
